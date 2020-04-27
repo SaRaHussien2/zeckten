@@ -1,0 +1,484 @@
+/* Prefix Mixin
+ Auto Add Prefixes To Properties
+ */
+
+ @mixin prefixer ($property, $value, $prefixes :()) {
+     
+    @each $prefix in $prefixes {
+        #{'-'+ $prefix +'-' + $property }: $value;
+    }
+        #{$property} : $value;
+ }
+ /*
+ **End of prefixer
+ */
+@media(max-width:768px){
+    .second-heading{
+        font-size: 24px;
+        word-break: break-all;
+    }
+}
+
+@media(max-width :375px){
+    #header  {
+        .nav {
+            .logo{
+              top:-25px;
+                  img{
+                    width: 120px;
+                    height: 90px;
+                    }
+                }
+            }
+    .nav .middle{
+        display: block;
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        top:100%;
+        border-radius: 0;
+       background-color: #fff;
+       @include prefixer(transition, all .5s ease-in-out,webkit moz o );
+
+         li{
+           width: 100%;
+           border-bottom: 1px solid #eee;
+           text-align: left;
+           
+           .second-menu{
+               min-height: 100px;
+               background-color: $greyColor;
+               ul{
+                   li{
+                    border-bottom: 1px solid #fff;
+                }
+               }
+
+               
+           }
+
+       }
+
+        
+        &.open{
+            left:0%;
+        }
+
+    }
+    .navright-link{
+             a{
+                display: none;
+                  }
+        }
+    .the-toggler{
+        display: block;
+        
+        
+    }
+}
+}
+@media(max-width:375px){
+    .full-nav{
+            .logo{
+              top:-25px;
+                  img{
+                    width: 120px;
+                    height: 90px;
+                    }
+                }
+            }
+   
+     .middle{
+        display: block;
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        top:100%;
+        border-radius: 0;
+       background-color: #fff;
+       @include prefixer(transition, all .5s ease-in-out,webkit moz o );
+
+         li{
+           width: 100%;
+           border-bottom: 1px solid #eee;
+           text-align: left;
+           
+           .second-menu{
+               min-height: 100px;
+               background-color: $greyColor;
+               ul{
+                   li{
+                    border-bottom: 1px solid #fff;
+                }
+               }
+
+               
+           }
+
+       }
+
+        
+        &.open{
+            left:0%;
+        }
+
+    }
+    .navright-link{
+        margin-top: 0;
+             a{
+                display: none;
+                  }
+        }
+    .the-toggler{
+        display: block;
+        
+        
+    }
+}
+
+
+
+@media(max-width:375px){
+    .full-nav{
+         .navright-link{
+             margin-top: 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+.container, .container-md, .container-sm {
+    max-width: 100%;
+}
+
+}
+
+@media(max-width:375px) {
+    #header{ 
+        .nav{
+        width: 100%;
+        top:0;
+        border-radius: 0;
+        padding: 20px;
+       
+
+    
+    #header .nav .logo{
+        top:0;
+    }
+    #header .nav .middle ul li{
+        padding: 0  10px;
+    }
+}}
+}
+@media(max-width:375px) {
+    
+       .full-navbar{
+        width: 100%;
+        top:0;
+        border-radius: 0;
+        padding:0 20px;
+       
+
+    
+    .logo{
+        top:0;
+    }
+     .middle ul li{
+        padding: 0  10px;
+    }
+}}
+
+
+@media(min-width:768px) and(max-width:1024px){
+    #header{ 
+        .nav{
+            width: 90%;
+            top:0;
+            border-radius: 20px;
+            padding: 0 20px;
+
+     .logo{
+        top:13px;
+
+    }
+  .middle { 
+      ul {
+          display: flex;
+         li{
+            padding: 10px 5px;
+
+         
+          }
+        }
+     }
+     .navright-link{
+        margin-top: 50px;
+        margin-left: -15px;
+     }
+    }
+    }
+
+}
+@media(min-width:768px) and(max-width:1024px){
+   .full-navbar{
+            width: 90%;
+            top:0;
+            border-radius: 20px;
+            padding: 0 20px;
+
+     .logo{
+        top:13px;
+
+    }
+  .middle { 
+      ul {
+          display: flex;
+         li{
+            padding: 10px 5px;
+
+         
+          }
+        }
+     }
+     .navright-link{
+        margin-top: 0;
+        margin-left: -15px;
+     }
+    }
+}
+
+
+@media(min-width:768px) and (max-width:1024px){
+    .side-menu{
+        left: 10px;
+    }
+   
+}
+@media(max-width:375px){
+    .side-menu{
+        display: none;
+    }
+}
+
+// start section 
+@media(max-width:768px){
+    .questions  {
+        .section{
+            .question-item{
+                .question-content{
+                    .question-image{
+                       img{
+                            max-width: 100%;
+                        }
+                    }
+                    .question-para{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .sections{
+        .section{
+            padding-top: 50px;
+            margin-right: 40px;
+
+        }
+    }
+}
+
+
+/*
+**start footer
+*/ 
+@media(min-width:991px) and  (max-width:1025px){
+    #footer{
+         .middle-content{
+              bottom: 75px;
+             }
+             .right-content{
+                 right: 20px;
+             }
+        }
+}
+@media(max-width:375px){
+    #footer{
+        padding: 130px 0;
+    
+        .middle-content{
+            bottom: 225px;
+            }
+        .left-content{
+            margin-left: 25px;
+            margin-top: -50px;
+        
+            .image-two{
+                margin-left: 100px;
+                }
+            }
+        .right-content{
+                right: 105px;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+}
+
+@media(min-width:376px) and(max-width:768px){
+
+        #footer{
+            .middle-content{
+                bottom: 55px;
+                }
+            .right-content{
+                right: 20px;
+            }
+        }
+
+}
+@media(max-width:375px){
+    #header{
+        .arrow{
+            right: 40%;
+        }
+    }
+}
+@media (min-width:376px) and (max-width:768px){
+    #header{
+
+    .arrow{
+        right: 48%;
+        bottom: 40px;
+        }
+    }
+}
+@media(min-width:991px) and(max-width:1024px){
+    #header{
+        .arrow{
+            bottom: 50px;
+            right: 45%;
+        }
+    }
+}
+// End of  footer
+
+// start section questions .section 
+@media(max-width:375px){
+    .questions{
+        .section{
+            max-width: 100%;
+             .question-item {
+                 margin-left: 10px;
+                .question-para{
+                    margin-left: 0px;
+
+                }
+
+             }
+            }
+        }
+    }
+// End of section sections .section 
+@media(max-width:375px){
+    .sections {
+        .section{
+            max-width: 100%;
+            padding: 70px 0 0 0;
+            margin-left: 15px;
+
+
+        }
+    }
+}
+
+// nav in all pages
+@media(min-width:768px) and (max-width:1024px){
+.full-navbar{
+    .middle{
+        ul{
+            display: flex;
+
+            li{
+                padding: 20px 10px;
+
+            }
+        }
+    }
+    .navright-link{
+        margin-top: 75px;
+        margin-left: -15px;
+    }
+}
+}
+@media (min-width:768px) and (max-width:991px){
+    .basic{
+        margin-bottom: 60px;
+ 
+        .part{
+          
+            padding:110px 0 0 0;
+            img{
+                width: 50%;
+                margin-left: 100px;
+            }
+        }
+
+      }
+} 
+@media(min-width:993px) and(max-width:1024px){
+    .basic{
+        margin-bottom: 60px;
+        .part{
+            padding-top: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// start zeckenundfsme.html page
+@media(min-width:768px) and (max-width:1024px){
+    .areas{
+        padding-top: 110px;
+        margin-bottom: 100px;
+    }
+    #footer{
+        .middle-content{
+            bottom: 60px;
+        }
+    }
+}
+@media(max-width:375px){
+    .basic{
+        .part{
+            max-width: 100%;
+            padding-top: 100px;
+        }
+    }
+}
+// End of zeckenundfsme.html page
+// start edia in cover para
+@media(min-width:768px)and(max-width:1024px){
+    .cover{
+        .cover-para{
+            padding: 150px 0;
+        
+        &::after{
+            top: 72%;
+        }
+    }
+    }
+}
+@media(max-width:375px){
+    .cover{
+        .cover-para{
+            padding: 15px 0;
+            h3{
+                padding: 50px 0;
+                font-size: 14px;
+            }
+        }
+    }
+}

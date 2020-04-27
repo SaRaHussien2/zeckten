@@ -1,0 +1,52 @@
+
+@import './variables';
+@import './responsive';
+
+#footer{
+    background-color: $greenColor;
+    padding: 50px 0 ;
+    margin-top: 50px;
+    position: relative;
+
+    .left-content{
+
+        .image-two{
+            margin-top: 15px;
+                }
+    }
+
+    .middle-content{
+        position: absolute;
+        left: 20%;
+        bottom:85px;
+    }
+
+    .right-content{
+        margin-left: 100px !important;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top:0;
+
+        ul{
+            li{
+                font-size: 13px;
+                line-height: 2rem;
+
+                a{
+                    color: #fff;
+
+                    &:hover{
+                        text-decoration: none;
+                        color: rgba(#fff,.4);
+                        @include prefixer(transition, all .5s ease-in-out,webkit moz o );
+
+                    }
+                }
+                
+            }
+        }
+    }
+
+
+}
